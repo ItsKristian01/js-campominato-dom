@@ -40,3 +40,18 @@ con difficoltà 3 => tra 1 e 49
 - Creo un ciclo for che genera i numeri da 1 a 100 
 - Ogni numero deve avere una cella apposita per creare la griglia
 - Ad ogni cella al click deve diventare azzurra e emmettere nella console un messaggio con il numero contenuto
+- Generare 16 numeri random con array non duplicati compresi nel range del gioco 1-100
+- Definire il numero massimo di tentativi consentiti: 100 - 16
+- Array di numeri “non bombe” cliccate dal utente per avere il punteggio
+
+- Al click sulla cella della griglia 
+leggo il numero cliccato textContent
+**se** numero cliccato = numero array bombe
+**allora** la cella diventa rossa
+fine gioco utente perde
+**altrimenti**
+la cella diventa azzurra
+***se*** questo numero non e’ stato gia’ cliccato precedentemente
+aggiungere il numero all’array di numeri “non bombe” cliccati
+se la lunghezza del array di “non bombe” e’ uguale al numero massimo di tentativi 
+**allora** fine gioco utente vince
