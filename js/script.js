@@ -12,6 +12,10 @@ for (let i = 1; i <= 100; i++) {
     this.classList.toggle("color");
     console.log(divCol);
   })
+
+  const bombs = generateBombs(100);
+  const maxClicks = 100 - bombs.length;
+  console.log(bombs, maxClicks);
 }
 
 // Button Click
@@ -23,6 +27,23 @@ buttonPlay.addEventListener("click", function() {   //Added Click to Button Play
 
 
 
+
+/**
+ * Description placeholder
+ * @date 10/30/2023 - 3:42:12 PM
+ *
+ * @param {*} max
+ */
+function generateBombs(max) {
+  const numbers = [];
+  while (numbers.length < 16) {
+    const rndNumber = Math.floor(Math.random() * 16) + 1;
+    if(!numbers.includes(rndNumber)) {
+      numbers.push(rndNumber);
+    }
+  }
+  return numbers;
+}
 
 
 
